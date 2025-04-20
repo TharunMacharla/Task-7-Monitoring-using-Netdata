@@ -1,0 +1,11 @@
+# Docker Install Commands
+
+sudo -i
+apt update -y
+apt install docker.io -y
+systemctl start docker
+systemctl enable docker
+docker --version
+
+# Run Netdata Container
+docker run -d --name=netdata -p 19999:19999 netdata/netdata
